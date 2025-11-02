@@ -106,3 +106,5 @@ kubectl get daemonset -n calico-system
 - Add Grafana alerts to trigger on OOMKilled pods or high restart counts. Use of Prometheus alert manager.
 - Define default `NetworkPolicy` baselines to prevent accidental isolation.
 
+clean up:
+<img width="1919" height="954" alt="image" src="https://github.com/user-attachments/assets/76bcc117-9a64-49bd-b60e-106cf449d70c" />
