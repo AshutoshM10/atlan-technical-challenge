@@ -108,3 +108,6 @@ kubectl get pods -n tigera-operator
 kubectl get pods -n calico-system
 kubectl get daemonset -n calico-system
 ```
+
+## cluster and it's application pods
+![Cluster pods](./screenshots/allpods.png)
