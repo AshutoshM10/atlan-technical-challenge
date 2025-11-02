@@ -25,8 +25,8 @@ This blocked all ingress to the db pods.
 
 Apply deployments:
 ```bash
-kubectl apply -f manifests/db.yaml
-kubectl apply -f manifests/web.yaml
+kubectl apply -f manifests/issue-3/db.yaml
+kubectl apply -f manifests/issue-3/web.yaml
 ```
 
 Check pod status:
@@ -109,7 +109,7 @@ spec:
 
 Apply the policy:
 ```bash
-kubectl apply -f manifests/allow-web-to-db.yaml
+kubectl apply -f manifests/issue-3/allow-web-to-db.yaml
 ```
 
 ---
