@@ -7,16 +7,6 @@
 
 ---
 
-## Overview
-
-This repository contains my solution for Atlan's **SRE-II Take-Home Challenge**.  
-It demonstrates my approach to:
-- Diagnosing and fixing complex outages in a Kubernetes-based system.
-- Correlating metrics and logs using Prometheus + Grafana.
-- Applying SRE best practices for reliability and prevention.
-
----
-
 ## Tech Stack
 
 | Component | Purpose |
@@ -31,7 +21,7 @@ It demonstrates my approach to:
 ---
 
 ## Objective
-Provision a lightweight, personal EKS cluster to host the simulated outage environment for Atlan's SRE challenge.
+Provisioning a lightweight, personal EKS cluster to host the simulated outage environment for Atlan's SRE challenge.
 
 ---
 
@@ -58,7 +48,7 @@ after running the commands we can see something like this
 
 ### EKS Cluster Setup and CNI Configuration
 
-The Amazon EKS cluster (`atlan-technical-challenge`) was set up and configured to use Calico as the primary CNI. This setup enables enhanced observability, reliability, and fine-grained network control within the Kubernetes environment.
+The Amazon EKS cluster (`atlan-technical-challenge`) was set up and configured to use Calico as the primary CNI. This setup enables enhanced observability, reliability, and better network control within the Kubernetes environment.
 ### Cluster Setup Summary
 - Created EKS cluster without nodegroups
 - Removed AWS VPC CNI
@@ -67,9 +57,9 @@ The Amazon EKS cluster (`atlan-technical-challenge`) was set up and configured t
 - Verified node and CNI readiness
 
 1. **Create the EKS cluster without nodes**
-   ```bash
-   eksctl create cluster --name atlan-technical-challenge --without-nodegroup
-   ```
+```bash
+eksctl create cluster --name atlan-technical-challenge --without-nodegroup
+```
 2. **Remove the default AWS CNI**
 ```bash
 kubectl delete daemonset -n kube-system aws-node
