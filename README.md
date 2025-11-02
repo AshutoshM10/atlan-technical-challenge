@@ -52,3 +52,4 @@ After creation:
 aws eks update-kubeconfig --name atlan-sre-challenge --region ap-south-1
 kubectl get nodes
 ```
+
