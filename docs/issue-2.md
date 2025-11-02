@@ -110,7 +110,7 @@ resources:
 - Apply the fix:
 
 ```bash
-kubectl apply -f manifests/frontend-oom.yaml
+kubectl apply -f manifests/issue-2/frontend-oom.yaml
 ```
 
 Or patch the memory limit directly for immediate effect:
