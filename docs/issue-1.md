@@ -129,6 +129,3 @@ To resolve, make sure the backend Service’s selector matches your pod labels. 
 * Logs or screenshots showing **before & after** connectivity:
     * `kubectl get endpoints backend-svc`: shows `<none>` before fix, endpoint IP(s) after fix
     * Frontend curl logs: `curl: (7) Failed to connect...` before fix, full HTML response after fix
-
-Screenshot:
-![service discovery](../screenshots/frontend-pod-spikes.png)
