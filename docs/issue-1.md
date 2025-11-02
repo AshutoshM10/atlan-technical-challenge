@@ -97,7 +97,7 @@ To resolve, make sure the backend Service’s selector matches your pod labels. 
 
 1. **Edit the manifest and reapply:**
    ```bash
-   kubectl apply -f manifests/backend.yaml
+   kubectl apply -f manifests/issue-1/backend.yaml
    ```
 2. **Patch the service selector directly:**
    ```bash
@@ -124,8 +124,8 @@ To resolve, make sure the backend Service’s selector matches your pod labels. 
 
 ## Required Artifacts
 
-* `/manifests/frontend.yaml`
-* `/manifests/backend.yaml`
+* `/manifests/issue-1/frontend.yaml`
+* `/manifests/issue-1/backend.yaml`
 * Logs or screenshots showing **before & after** connectivity:
     * `kubectl get endpoints backend-svc`: shows `<none>` before fix, endpoint IP(s) after fix
     * Frontend curl logs: `curl: (7) Failed to connect...` before fix, full HTML response after fix
