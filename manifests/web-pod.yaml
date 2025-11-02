@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    app: web
+spec:
+  containers:
+  - name: curl
+    image: curlimages/curl
+    command:
+      - sh
+      - -c
+      - |
+        while true; do
+          curl -s db-service.default.svc.cluster.local || echo "connection failed";
+          sleep 5;
+        done

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-oom
+  labels:
+    app: frontend-oom
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-oom
+  template:
+    metadata:
+      labels:
+        app: frontend-oom
+    spec:
+      containers:
+        - name: stress-container
+          image: polinux/stress
+          command: ["stress"]
+          args: ["--vm", "1", "--vm-bytes", "250M", "--vm-hang", "1"]
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
