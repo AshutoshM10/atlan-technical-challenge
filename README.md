@@ -43,9 +43,6 @@ aws eks update-kubeconfig --name atlan-technical-challenge --region ap-south-1
 kubectl get nodes
 ```
 
-after running the commands we can see something like this
-![App Screenshot](./screenshots/image.png)
-
 ### EKS Cluster Setup and CNI Configuration
 
 The Amazon EKS cluster (`atlan-technical-challenge`) was set up and configured to use Calico as the primary CNI. This setup enables enhanced observability, reliability, and better network control within the Kubernetes environment.
